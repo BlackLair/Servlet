@@ -9,13 +9,15 @@
 
 </head>
 <body>
-	<h2>체격 조건 입력</h2>
-	<div class="box">
-		<form class="d-flex" method="post" action="/jsp/test/test02.jsp">
-			<input class="form-control w-25" type="text" name="height"><label>cm</label>
-			<input class="form-control w-25" type="text" name="weight"><label>kg</label>
-			<button class="form-control w-25 bg-info text-white" type="submit">계산</button>
-		</form>
+	<div class="container">
+		<h2>체격 조건 입력</h2>
+		<div class="box">
+			<form class="d-flex" method="post" action="/jsp/test/test02.jsp">
+				<input class="form-control w-25" type="text" name="height"><label>cm</label>
+				<input class="form-control w-25" type="text" name="weight"><label>kg</label>
+				<button class="form-control w-25 bg-info text-white" type="submit">계산</button>
+			</form>
+		</div>	
 	</div>
 	
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
