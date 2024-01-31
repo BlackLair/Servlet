@@ -15,8 +15,12 @@
 		goBackScript = "<script>alert(\"잘못된 접근입니다.\");" + "location.replace(\"/jsp/test/test04-input.jsp\");" + "</script>";
 	}else{
 		result = 0;
-		op1 = Double.parseDouble(operand1);
-		op2 = Double.parseDouble(operand2);
+		try{
+			op1 = Double.parseDouble(operand1);
+			op2 = Double.parseDouble(operand2);
+		}catch (Exception e){
+			goBackScript = "<script>alert(\"형식이 바르지 않습니다.\");" + "location.replace(\"/jsp/test/test04-input.jsp\");" + "</script>";
+		}
 		if(operator.equals("add")){
 			result = op1 + op2;
 			operatorChar = "+";
