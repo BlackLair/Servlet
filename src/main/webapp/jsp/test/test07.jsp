@@ -43,7 +43,7 @@
 			<tbody>
 				<% 	for(int i = 0; i < list.size(); i++){ 
 						Map<String, Object> temp = list.get(i);
-						if(temp.get("menu").equals(word) && (overFour == null || (double)temp.get("point") > 4)){
+						if(temp.get("menu").equals(word) && (overFour == null || (Double)temp.get("point") > 4)){
 				%>
 				<tr>
 					<td><%= temp.get("menu") %></td>
