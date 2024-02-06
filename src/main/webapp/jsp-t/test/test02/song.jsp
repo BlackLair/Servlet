@@ -115,7 +115,7 @@
 		</section>
 		<% }else{ %>
 		<section class="artist p-4 d-flex justify-content-center align-items-center">
-			<div class="h3">찾는 곡이 없습니다.</div>
+			<div class="h3">"<%= search %>"라는 곡을 찾을 수 없습니다.</div>
 		</section>
 		
 		<% } %>
