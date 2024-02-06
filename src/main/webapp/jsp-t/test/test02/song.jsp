@@ -76,12 +76,23 @@
 	Map<String, Object> song = null;
 	int minutes = 0;
 	int seconds = 0;
-	for(Map<String, Object> temp : musicList){
-		if((search != null && search.equals((String)temp.get("title"))) || (idStr != null && Integer.parseInt(idStr) == (Integer)temp.get("id"))){
-			song = temp;
-			minutes = (int)song.get("time") / 60;
-			seconds = (int)song.get("time") % 60;
-			break;
+	if(search != null){
+		for(Map<String, Object> temp : musicList){
+			if(search.equals((String)temp.get("title"))){
+				song = temp;
+				minutes = (int)song.get("time") / 60;
+				seconds = (int)song.get("time") % 60;
+				break;
+			}
+		}
+	}else if(idStr != null){
+		for(Map<String, Object> temp : musicList){
+			if(Integer.parseInt(idStr) == (Integer)temp.get("id")){
+				song = temp;
+				minutes = (int)song.get("time") / 60;
+				seconds = (int)song.get("time") % 60;
+				break;
+			}
 		}
 	}
 	
