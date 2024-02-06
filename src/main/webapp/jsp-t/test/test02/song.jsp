@@ -72,19 +72,19 @@
 	musicList.add(musicInfo);
 	
 	String search = request.getParameter("search");
+	String idStr = request.getParameter("searchId");
 	Map<String, Object> song = null;
 	int minutes = 0;
 	int seconds = 0;
-	if(search != null){
-		for(Map<String, Object> temp : musicList){
-			if(search.equals((String)temp.get("title"))){
-				song = temp;
-				minutes = (int)song.get("time") / 60;
-				seconds = (int)song.get("time") % 60;
-				break;
-			}
+	for(Map<String, Object> temp : musicList){
+		if((search != null && search.equals((String)temp.get("title"))) || (idStr != null && Integer.parseInt(idStr) == (Integer)temp.get("id"))){
+			song = temp;
+			minutes = (int)song.get("time") / 60;
+			seconds = (int)song.get("time") % 60;
+			break;
 		}
 	}
+	
 	
 %>
     	<h2>곡 정보</h2>

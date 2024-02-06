@@ -87,7 +87,7 @@
 				%>
 					<tr>
 						<td><%= temp.get("id") %></td>
-						<td><a href="/jsp-t/test/test02/songInfo.jsp?search=<%= temp.get("title") %>"><%= temp.get("title") %></a></td>
+						<td><a href="/jsp-t/test/test02/songInfo.jsp?searchId=<%= temp.get("id") %>"><%= temp.get("title") %></a></td>
 						<td><%= temp.get("album") %></td>
 					</tr>
 				
