@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+#wrap{
+	width:1200px;
+	height:800px;
+	margin:0 auto;
+}
+
+header{
+	height:100px;
+}
+
+.artist{
+	height:300px;
+	border:solid 2px rgb(0, 255, 64);
+}
