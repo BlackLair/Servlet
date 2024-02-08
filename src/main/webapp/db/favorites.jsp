@@ -18,7 +18,7 @@
 <%
 	MysqlService mysqlService = MysqlService.getInstance();
 	mysqlService.connect();
-	String query = "SELECT `name`, `url` FROM `favorites` ORDER BY `id` DESC;";
+	String query = "SELECT `id`, `name`, `url` FROM `favorites` ORDER BY `id` DESC;";
 	ResultSet resultSet = mysqlService.select(query);
 %>
 <body>
@@ -37,13 +37,14 @@
 					<td><%= resultSet.getString("name") %></td>
 					<td><a href="<%= resultSet.getString("url")%>"><%= resultSet.getString("url") %></a></td>
 					<td>
-						<a href="#">삭제</a>
+						<a href="/db/test/favorites-delete?id=<%= resultSet.getString("id") %>">삭제</a>
 					</td>
 				</tr>
 			<% } %>
 			</tbody>
 		</table>
 	</div>
+	<a href="/db/favorites-input.jsp">즐겨찾기 추가</a>
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
