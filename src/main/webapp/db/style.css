@@ -21,6 +21,9 @@ header{
 	margin-right:5px;
 	border:solid 2px darkorange;
 }
+.section-upload{
+	padding:50px 100px;
+}
 
 footer{
 	height:100px;
