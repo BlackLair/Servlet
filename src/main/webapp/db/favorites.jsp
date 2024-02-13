@@ -32,12 +32,26 @@
 				</tr>
 			</thead>
 			<tbody>
-			<% while(resultSet.next()){ %>
+			<%!
+				public String avoidInjection(String str){
+					str = str.replace("&", "&amp");
+					str = str.replace("\"", "&quot");
+					str = str.replace("'", "&#039");
+					str = str.replace("<", "&lt;");
+					str = str.replace(">", "&gt;");
+					return str;
+				}
+			%> 
+			<% while(resultSet.next()){ 
+				String tempName = avoidInjection(resultSet.getString("name"));
+				String tempUrl = avoidInjection(resultSet.getString("url"));
+				String tempId = resultSet.getString("id");
+			%>
 				<tr>
-					<td><%= resultSet.getString("name") %></td>
-					<td><a href="<%= resultSet.getString("url")%>"><%= resultSet.getString("url") %></a></td>
+					<td><%= tempName %></td>
+					<td><a href="<%= tempUrl %>"><%= tempUrl %></a></td>
 					<td>
-						<a href="/db/test/favorites-delete?id=<%= resultSet.getString("id") %>">삭제</a>
+						<a href="/db/test/favorites-delete?id=<%= tempId %>">삭제</a>
 					</td>
 				</tr>
 			<% } %>
