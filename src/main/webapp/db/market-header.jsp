@@ -7,8 +7,8 @@
 			</div>
 			<nav class="mt-2">
 				<ul class="w-100 nav nav-fill">
-					<li class="nav-item"><a href="#" class="nav-link text-white h4">리스트</a></li>
-					<li class="nav-item"><a href="#" class="nav-link text-white h4">물건 올리기</a></li>
+					<li class="nav-item"><a href="/db/market-list.jsp" class="nav-link text-white h4">리스트</a></li>
+					<li class="nav-item"><a href="/db/market-upload.jsp" class="nav-link text-white h4">물건 올리기</a></li>
 					<li class="nav-item"><a href="#" class="nav-link text-white h4">마이 페이지</a></li>
 				</ul>
 			</nav>
